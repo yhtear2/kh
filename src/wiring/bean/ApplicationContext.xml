@@ -6,12 +6,23 @@
 						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 	
 	<!-- Simple Bean Wiring -->
-	<bean id="duke" class="wiring.bean.Juggler"/>
-	<bean id="singer" class="wiring.bean.Singer">
+	<bean id="duke" class="wiring.bean.Juggler">
+		<constructor-arg value="5"/>
+	
 	</bean>
 	
-		
-		
-		
+	<bean id="flower" class="wiring.bean.Flower"/>
+	<bean id="picnic" class="wiring.bean.Picnic"/>
+	<bean id="john" class="wiring.bean.PoeticJuggler">
+		<constructor-arg value="5"></constructor-arg>
+		<constructor-arg ref="flower"></constructor-arg>
+	</bean>	
+	
+	<bean id="bounce" class="wiring.bean.Bounce"/>
+	<bean id="hello" class="wiring.bean.Hello"/>
+	<bean id="singer" class="wiring.bean.Singer">
+		<constructor-arg value="조용필"></constructor-arg>
+		<constructor-arg ref="bounce"></constructor-arg>
+	</bean>
 		
 </beans>

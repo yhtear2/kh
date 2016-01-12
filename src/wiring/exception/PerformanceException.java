@@ -1,4 +1,4 @@
-package wiring.bean;
+package wiring.exception;
 
 public class PerformanceException extends Exception {
 

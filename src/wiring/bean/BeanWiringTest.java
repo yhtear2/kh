@@ -3,6 +3,8 @@ package wiring.bean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import wiring.exception.PerformanceException;
+
 public class BeanWiringTest {
 	public static void main(String args[]) throws PerformanceException{
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("wiring/bean/ApplicationContext.xml");
@@ -17,11 +19,13 @@ public class BeanWiringTest {
 		
 		// DI( Dependency Injection )
 		// Simple Bean Wiring
-		Performer p = (Performer)ctx.getBean("duke");
+		Performer p = (Performer)ctx.getBean("john");
 		p.perform();
 		
-		p = (Performer)ctx.getBean("singer");
-		p.perform();
+		Performer s = (Performer)ctx.getBean("singer");
+		s.perform();
+		
+		
 	
 	}
 }

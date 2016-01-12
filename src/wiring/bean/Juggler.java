@@ -1,7 +1,17 @@
 package wiring.bean;
 
+import wiring.exception.PerformanceException;
+
 public class Juggler implements Performer {
-	private int beanBags;
+	int beanBags;
+	
+	public Juggler(){
+		
+	}
+	
+	public Juggler(int beanBags){
+		this.beanBags = beanBags;
+	}
 	
 	@Override
 	public void perform() throws PerformanceException {
