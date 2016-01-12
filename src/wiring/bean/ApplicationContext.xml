@@ -11,6 +11,7 @@
 	
 	</bean>
 	
+	<!-- Poetic -->
 	<bean id="flower" class="wiring.bean.Flower"/>
 	<bean id="picnic" class="wiring.bean.Picnic"/>
 	<bean id="john" class="wiring.bean.PoeticJuggler">
@@ -18,6 +19,30 @@
 		<constructor-arg ref="flower"></constructor-arg>
 	</bean>	
 	
+	<!-- factory-method -->
+	<bean id="s3" class="wiring.bean.Stage"/>
+	<bean id="s4" class="wiring.bean.Stage" factory-method="getInstance"/>
+	
+	<!-- singleton / prototype -->
+	<bean id="ticket" class="wiring.bean.Ticket" scope="prototype">
+		<constructor-arg value="100"></constructor-arg>
+	</bean>
+	
+	<!-- init-method / destory-method -->
+	<bean id="auditorium" class="wiring.bean.Auditorium" init-method="turnOn" destroy-method="turnOff"/>
+	
+	<!--  -->
+	<bean id="piano" class="wiring.bean.Piano"/>
+	<bean id="guitar" class="wiring.bean.Guitar"/>
+	<bean id="drum" class="wiring.bean.Drum"/>
+	<bean id="instrumentalist" class="wiring.bean.Instrumentalist">
+		<constructor-arg value="빠운스"/>
+		<constructor-arg ref="piano"/>
+		
+		<property name="instrument" ref="guitar"/>	
+	</bean>
+	
+	<!-- Singer -->
 	<bean id="bounce" class="wiring.bean.Bounce"/>
 	<bean id="hello" class="wiring.bean.Hello"/>
 	<bean id="singer" class="wiring.bean.Singer">
