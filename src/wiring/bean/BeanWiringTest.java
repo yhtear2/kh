@@ -51,15 +51,13 @@ public class BeanWiringTest {
 		// init-method / destory-method
 
 		// Property를 통한 주입
-		Performer p = (Performer)ctx.getBean("instrumentalist");
+		Performer p = (Performer)ctx.getBean("twoManBand");
 		p.perform();
 		
 		
 		// Singer
-		// Performer s = (Performer)ctx.getBean("singer");
-		// s.perform();
+//		Performer s = (Performer)ctx.getBean("singer");
+//		s.perform();
 		
-		
-	
 	}
 }

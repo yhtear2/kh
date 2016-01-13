@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+						http://www.springframework.org/schema/util
+						http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+	
+	
+	<bean id="props" class="wiring.spel.Props">
+		<property name="prop">
+			<!-- <value>data</value> -->
+			<!-- <value>#{10}</value> -->
+			<!-- <value>#{10.5}</value> -->
+			<!-- <value>#{'ABC'}</value> -->
+			<!-- <value>#{"ABC"}</value> -->
+			<!-- <value>#{1!=1}</value> -->
+			<!-- <value>#{instrumentalist.getSong().toUpperCase()}</value> -->
+			<!-- <value>#{r.nextInt(45)}</value> -->
+			<!-- <value>#{str?.toUpperCase()}</value> -->
+			<!-- <value>#{T(java.lang.Math).random()*40}</value> -->
+			<!-- <value>#{new java.util.Random().nextInt()}</value> -->
+			<!-- <value>#{5/2}</value> -->
+			<!-- <value>#{true or false}</value> -->
+			<!-- <value>#{5 > 2}</value> -->
+			<!-- <value>#{instrumentalist.getSong().equals("bounce")}</value> -->
+			<!-- <value>#{instrumentalist.getSong() == null ? "hello" : instrumentalist.getSong()}</value> -->
+			<!-- <value>#{instrumentalist.getSong() ?: "Hello"}</value> -->
+			<value>#{cities[1].getPopulation()}</value>
+		</property>
+	</bean>
+
+	<util:list id="cities">
+		<bean class="wiring.spel.City" p:name="서울" p:state="경기도" p:population="1000"/>
+		<bean class="wiring.spel.City" p:name="인천" p:state="경기도" p:population="2000"/>
+		<bean class="wiring.spel.City" p:name="광주" p:state="경기도" p:population="3000"/>			
+	</util:list>
+	
+	<bean id="r" class="java.util.Random"/>
+	<bean id="str" class="java.lang.String">
+		<constructor-arg value="abcde"></constructor-arg>
+	</bean>
+	<bean id="piano" class="wiring.bean.Piano"/>
+	<bean id="instrumentalist" class="wiring.bean.Instrumentalist">
+		<property name="song" value="bounce"/>
+		<property name="instrument" ref="piano"></property>
+	</bean>
+	
+</beans>

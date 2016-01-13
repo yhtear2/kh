@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans" 
 	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 	
@@ -31,23 +31,73 @@
 	<!-- init-method / destory-method -->
 	<bean id="auditorium" class="wiring.bean.Auditorium" init-method="turnOn" destroy-method="turnOff"/>
 	
-	<!--  -->
+	<!-- Instrumentalist -->
 	<bean id="piano" class="wiring.bean.Piano"/>
 	<bean id="guitar" class="wiring.bean.Guitar"/>
 	<bean id="drum" class="wiring.bean.Drum"/>
+	<!--
 	<bean id="instrumentalist" class="wiring.bean.Instrumentalist">
 		<constructor-arg value="빠운스"/>
 		<constructor-arg ref="piano"/>
 		
 		<property name="instrument" ref="guitar"/>	
 	</bean>
+	-->
+	
+	<!-- p name space -->
+	<bean id="instrumentalist" class="wiring.bean.Instrumentalist" p:song="Bounce" p:instrument-ref="piano">
+	</bean>
+
+	<!-- Collection Wiring -->
+	<!-- list / set -->
+	<bean id="oneManBand" class="wiring.bean.OneManBand">
+		<property name="songs">
+			<list value-type="java.lang.String">
+				<value>bounce</value>
+				<value>hello</value>
+			</list>
+		</property>
+		<property name="instruments">
+			<set>
+				<ref bean="piano"/>
+				<ref bean="drum"/>
+				<ref bean="guitar"/>
+				<ref bean="guitar"/>
+			</set>
+		</property>
+	</bean>
+	
+	<!-- map -->
+	<bean id="twoManBand" class="wiring.bean.TwoManBand">
+		<property name="songs" >
+			<props>
+				<prop key="조용필">bounce</prop>
+				<prop key="고병완">너를 보내고</prop>
+			</props>
+		</property>			
+	
+		<property name="instruments">
+			<map key-type="java.lang.String" value-type="java.util.Map">
+				<entry key="기타" value-ref="guitar"/>
+				<entry key="피아노" value-ref="piano"/>
+				<entry key="드럼" value-ref="drum"/>
+			</map>
+		</property>
+	</bean>
 	
 	<!-- Singer -->
 	<bean id="bounce" class="wiring.bean.Bounce"/>
 	<bean id="hello" class="wiring.bean.Hello"/>
 	<bean id="singer" class="wiring.bean.Singer">
-		<constructor-arg value="조용필"></constructor-arg>
-		<constructor-arg ref="bounce"></constructor-arg>
+		<property name="name" value="조용필"/>
+		<property name="songs">
+			<list>
+				<ref bean="bounce"/>
+				<ref bean="hello"/>
+			</list>
+		</property>
 	</bean>
-		
+	 <!-- 
+	 <bean id="singer" class="wiring.bean.Singer" p:name="조용필" p:song-ref="bounce"/>
+	  -->
 </beans>
