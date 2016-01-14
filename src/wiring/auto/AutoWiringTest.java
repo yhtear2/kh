@@ -9,7 +9,10 @@ public class AutoWiringTest {
 	public static void main(String args[]) throws PerformanceException{
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("wiring/auto/ApplicationContext.xml");
 		
-		Performer p = (Performer)ctx.getBean("data");
+		Performer p = (Performer)ctx.getBean("john");
 		p.perform();
+
+		Performer s = (Performer)ctx.getBean("singer");
+		s.perform();
 	}
 }

@@ -1,15 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" 
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+						http://www.springframework.org/schema/util
+						http://www.springframework.org/schema/util/spring-util-4.2.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-4.2.xsd
+						">
 	
-	
+	<!-- byName -->
+	<!--
 	<bean id="piano" class="wiring.auto.Piano"/>
-	<bean id="data" class="wiring.auto.Instrumentalist">
+	<bean id="drum" class="wiring.auto.Drum"/>
+	<bean id="instrument" class="wiring.auto.Guitar"/>
+	<bean id="john" class="wiring.auto.Instrumentalist" autowire="byName">
 		<property name="song" value="쇼팽 - 흑건"/>
-		<property name="instrument" ref="piano"/>
 	</bean>
+	-->
+	
+	<!-- byType -->
+	<!-- 
+	<bean id="piano" class="wiring.auto.Piano" primary="false"/>
+	<bean id="drum" class="wiring.auto.Drum" primary="false"/>
+	<bean id="guitar" class="wiring.auto.Guitar" primary="true"/>
+	<bean id="john" class="wiring.auto.Instrumentalist" autowire="byType" >
+		<property name="song" value="쇼팽 - 흑건"/>
+	</bean>
+	
+	<bean id="piano" class="wiring.auto.Piano" autowire-candidate="false"/>
+	<bean id="drum" class="wiring.auto.Drum" autowire-candidate="false"/>
+	<bean id="guitar" class="wiring.auto.Guitar" autowire-candidate="true"/>
+	<bean id="john" class="wiring.auto.Instrumentalist" autowire="byType" >
+		<property name="song" value="쇼팽 - 흑건"/>
+	</bean>
+	-->
+	<!-- 
+	<bean id="piano" class="wiring.auto.Piano"/>
+	<bean id="drum" class="wiring.auto.Drum"/>
+	<bean id="guitar" class="wiring.auto.Guitar" primary="true"/>
+	<bean id="john" class="wiring.auto.Instrumentalist" autowire="constructor" >
+		<constructor-arg value="bounce"/>
+	</bean>
+	 -->
+	 
+	<!-- Annotaion Wiring -->
+	<context:annotation-config/>
+	<!-- Instrumentalist -->
+	<bean id="piano" class="wiring.auto.Piano"/>
+	<bean id="drum" class="wiring.auto.Drum"/>
+	<bean id="guitar" class="wiring.auto.Guitar"/>
+	<bean id="john" class="wiring.auto.Instrumentalist"/>
+	
+	<!-- Singer -->
+	<bean id="hello" class="wiring.auto.Hello"/>
+	<bean id="bounce" class="wiring.auto.Bounce"/>
+	<bean id="singer" class="wiring.auto.Singer"/>
+	
+	
+	
+	<!-- by Name -->
+	<!-- 
+	<util:list id="songs">
+		<bean id="hello" class="wiring.auto.Hello"/>
+		<bean id="bounce" class="wiring.auto.Bounce"/>	
+	</util:list>
+	<bean id="singer" class="wiring.auto.Singer" autowire="byName">
+		<property name="name" value="고병완"/>
+	</bean>
+	 -->
+	
+	<!-- by Type -->
+	<!-- 
+	<bean id="hello" class="wiring.auto.Hello" autowire-candidate="true"/>
+	<bean id="bounce" class="wiring.auto.Bounce" autowire-candidate="false"/>	
+	<bean id="singer" class="wiring.auto.Singer" autowire="byType">
+		<property name="name" value="고병완"/>
+	</bean>
+	-->
+	
+	<!-- Constructor -->
+	<!-- 
+	<bean id="hello" class="wiring.auto.Hello"/>
+	<bean id="bounce" class="wiring.auto.Bounce"/>	
+	<bean id="singer" class="wiring.auto.Singer" autowire="constructor">
+		<constructor-arg value="고병완"/>
+	</bean>
+	 -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 </beans>
