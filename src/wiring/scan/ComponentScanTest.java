@@ -9,10 +9,10 @@ public class ComponentScanTest {
 	public static void main(String[] args) throws PerformanceException {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("wiring/scan/ApplicationContext.xml");
 		
-		Performer p = (Performer)ctx.getBean("john");
+		Performer p = (Performer)ctx.getBean("actor");
 		p.perform();
 		
-
+		Performer s = (Performer)ctx.getBean("singer");
+		s.perform();
 	}
-
 }

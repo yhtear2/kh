@@ -11,15 +11,14 @@
 						http://www.springframework.org/schema/context
 						http://www.springframework.org/schema/context/spring-context-4.2.xsd
 						">
-	<context:annotation-config/>
-	<!-- Actor -->
-	<bean id="john" class="wiring.scan.Actor"/>
+	<!-- 
+	<context:component-scan base-package="wiring.scan">
+		<context:include-filter type="assignable" expression="wiring.scan.Performer"/>
+		<context:include-filter type="assignable" expression="wiring.scan.Role"/>
+		<context:include-filter type="assignable" expression="wiring.scan.Song"/>
+		<context:include-filter type="assignable" expression="wiring.scan.Instrument"/>
+	</context:component-scan>
+	-->
 	
-	
-	
-	
-	
-	
-	
-	
+	<context:component-scan base-package="wiring.scan"/>
 </beans>

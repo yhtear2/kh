@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-4.2.xsd
+						http://www.springframework.org/schema/util
+						http://www.springframework.org/schema/util/spring-util-4.2.xsd
+						http://www.springframework.org/schema/aop
+						http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+						">
+	
+	<context:component-scan base-package="aop">
+		<context:include-filter type="assignable" expression="aop.Instrument"/>
+		<context:include-filter type="assignable" expression="aop.Song"/>
+	</context:component-scan>
+	
+	<aop:aspectj-autoproxy/>
+	
+	<!--
+	<bean id="audience" class="aop.Audience"/>
+	<aop:config>
+		<aop:aspect ref="audience">
+			<aop:pointcut expression="execution(* aop.Performer.perform(..))" id="perform"/>
+			<aop:before pointcut-ref="perform" method="takeSeat"/>
+			<aop:before pointcut-ref="perform" method="turnOffPhone"/>
+			<aop:after-returning pointcut-ref="perform" method="applud"/>
+			<aop:after-throwing pointcut-ref="perform" method="demandRefund"/>
+			
+			<aop:around pointcut-ref="perform" method="watchPerformance"/>
+		</aop:aspect>
+	</aop:config>
+	-->
+	
+	
+	<!-- 
+	<bean id="mindReader" class="aop.MindReader"/>
+	<aop:config>
+		<aop:aspect ref="mindReader">
+			<aop:pointcut expression="execution(* aop.Thinker.thinking(String)) and args(thoughts)" id="thinking"/>
+			<aop:before pointcut-ref="thinking" method="interceptor" arg-names="thoughts"/>
+			<aop:after-returning pointcut-ref="thinking" method="openCard" arg-names="thoughts"/>
+			
+		</aop:aspect>
+	</aop:config>
+	-->
+	
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
