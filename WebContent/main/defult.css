@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+.full_size{
+	width: 900;
+	height: 100%; 
+	
+}
+.main_menu{
+	float: left;
+	background-color: 4878A8;
+	width: 150;
+	height: 100%;
+	
+}
+.main_page{
+	float: left;
+	background-color:#f6f6f6; 
+	width: 700;
+	height: 100%;
+}
+.main_logo{
+	margin-top: 5px;
+	margin-bottom: 25px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.main_sign{
+	width: 150px;
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.main_login{
+	float: left;
+	width: 75px;
+	height: 50px;
+	margin-top: 2px;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+}
+.main_singup{
+	float: left;
+	width: 75px;
+	height: 50px;
+	margin-top: 2px;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+}
+.main_submanu{
+	width: 150px;
+	height: 30px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+
