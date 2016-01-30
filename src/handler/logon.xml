@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="Logon">
+
+	<select id="checkId" parameterType="String" resultType="Integer">
+		select count(*) from member where id=#{id}
+	</select>
+	
+	<select id="getMember" parameterType="String" resultType="dto.LogonDataBean">
+		select * from member where id=#{id}
+	</select>
+	
+	<insert id="insertMember" parameterType="dto.LogonDataBean">
+		insert into member values( #{id}, #{passwd}, #{name}, #{jumin1}, #{jumin2}, #{tel, jdbcType=VARCHAR}, #{email, jdbcType=VARCHAR}, #{reg_date} )
+	</insert>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete from member where id=#{id}
+	</delete>
+	
+	<update id="updateMember" parameterType="dto.LogonDataBean">
+		update member set passwd=#{passwd}, name=#{name}, tel=#{tel, jdbcType=VARCHAR}, email=#{email, jdbcType=VARCHAR} where id=#{id}
+	</update>
+	
+
+</mapper>	
+
+
+
+
+
+
+
+

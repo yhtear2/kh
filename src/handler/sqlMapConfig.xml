@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+	PUBLIC "-//mybatis.org/DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- sqlMapConfig.xml -->
+
+<configuration>
+	<!-- DB 연결 정보 -->
+	<properties resource="handler/dbConnect.properties"/>
+	
+	<!-- DB 연결 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${username}"/>
+				<property name="password" value="${password}"/>	
+				<property name="poolTimeToWait" value="${poolTimeToWait}"/>			
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- DB 처리 -->
+	<mappers>
+		<mapper resource="handler/board.xml"/>
+		<mapper resource="handler/logon.xml"/>
+	</mappers>	
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
