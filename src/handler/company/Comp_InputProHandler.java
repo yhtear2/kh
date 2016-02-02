@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import dao.comp.CompDao;
+import dto.comp.CompDataBean;
 import handler.Commandhandler;
 
 @Controller
@@ -23,6 +24,12 @@ public class Comp_InputProHandler implements Commandhandler {
 	@RequestMapping("/compInputPro")
 	@Override
 	public ModelAndView process(HttpServletRequest request, HttpServletResponse response) throws Throwable {
+		
+		
+		CompDataBean dto = new CompDataBean();
+		dao.insertComp(dto);
+		
+		
 		String page = "/FJ_COMP/compInputPro";
 		
 		Map<String, Object> map = new HashMap<String, Object>();
