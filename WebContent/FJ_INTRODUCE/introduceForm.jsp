@@ -10,12 +10,11 @@
 		<table border="0" cellspacing="0" width="100%">
 			<tr>
 				<th align="left">
-					<input type="text" name="sub_name" value="성장과정">
+					<input type="text" name="sub_name" value="성장과정" size="25" style="width:150px">
 				</th>
 			</tr>
 			<tr>
 				<td>
-					<label for="ex_input2">내용을 입력해 주세요</label>
 					<textarea rows="24" cols="80"></textarea>
 				</td>
 		</table>
