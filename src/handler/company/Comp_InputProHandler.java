@@ -11,14 +11,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import dao.Dao;
+import dao.comp.CompDao;
+import dao.comp.CompDao;
 import handler.Commandhandler;
 
 @Controller
 public class Comp_InputProHandler implements Commandhandler {
 
 	@Resource(name="dao")
-	private Dao dao;
+	private CompDao dao;
 
 	@RequestMapping("/compInputPro")
 	@Override
