@@ -9,13 +9,15 @@
 	<div class="standard">
 		<table border="0" cellspacing="0" width="100%">
 			<tr>
-				<th align="left">
-					<input type="text" name="sub_name" value="성장과정" size="25" style="width:150px">
+				<th>
+					<div>
+						<input name="sub_name[]" type="text" value="성장과정" size="25" style="width:150px">
+					</div>
 				</th>
 			</tr>
 			<tr>
 				<td>
-					<textarea rows="24" cols="80"></textarea>
+					<textarea name="contents[]" rows="24" cols="80"></textarea>
 				</td>
 		</table>
 	</div>
