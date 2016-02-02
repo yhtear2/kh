@@ -4,40 +4,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 <mapper namespace="Comp">
-	<insert id="insertComp" parameterType="dto.comp.CompDataBean">
-		INSERT INTO FJ_COMP
-		(
-			EMAIL
-			, CEO
-			, COMP_TYPE
-			, TEL
-			, ZIPCODE
-			, ADDRESS
-			, INFO
-			, CAPITAL
-			, YEAR_SALE
-			, EMP_COUNT
-			, LIKE_COUNT
-			, COMP_REG_DATE
-			, REG_DATE
-			, LAST_DATE
-		)VALUES(
-			#{EMAIL}
-			, #{CEO, jdbcType=VARCAHR}
-			, #{COMP_TYPE, jdbcType=VARCAHR}
-			, #{TEL, jdbcType=VARCAHR}
-			, #{ZIPCODE, jdbcType=VARCAHR}
-			, #{ADDRESS, jdbcType=VARCAHR}
-			, #{INFO, jdbcType=VARCAHR}
-			, #{CAPITAL, jdbcType=VARCAHR}
-			, #{YEAR_SALE, jdbcType=VARCAHR}
-			, #{EMP_COUNT, jdbcType=VARCAHR}
-			, #{LIKE_COUNT, jdbcType=VARCAHR}
-			, #{COMP_REG_DATE, jdbcType=VARCAHR}
-			, #{REG_DATE, jdbcType=VARCAHR}
-			, #{LAST_DATE, jdbcType=VARCAHR}
-		)
-	</insert>
+	
 
 </mapper>	
 

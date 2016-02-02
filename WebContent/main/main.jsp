@@ -12,7 +12,7 @@
 			<div class="main_singup">SingUp</div>
 		</div>
 		<div class="main_submanu">MyPage</div>
-		<div class="main_submanu" onclick="window.location='list.do'">게시판</div>
+		<div class="main_submanu">게시판</div>
 		<div class="main_submanu">채용공고</div>
 		<div class="main_submanu">QA</div>
 		<!-- 2016/02/02 추가 - 송윤호 -->

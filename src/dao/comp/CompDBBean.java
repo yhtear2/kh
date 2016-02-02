@@ -10,7 +10,7 @@ public class CompDBBean implements CompDao{
 
 	@Override
 	public int insertComp(CompDataBean dto) {
-		return 0;
+		return sqlSession.insert("Comp.insertComp", dto);
 	}
 
 	@Override
