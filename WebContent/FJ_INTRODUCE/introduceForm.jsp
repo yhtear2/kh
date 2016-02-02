@@ -7,7 +7,7 @@
 <div id="introduce">
 	<!-- 스타일 시스 먹이기 -->
 	<div class="standard">
-		<table>
+		<table border="0" cellspacing="0" width="100%">
 			<tr>
 				<th align="left">
 					<input type="text" name="sub_name" value="성장과정">
