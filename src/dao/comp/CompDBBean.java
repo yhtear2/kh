@@ -1,8 +1,12 @@
 package dao.comp;
 
+import org.apache.ibatis.session.SqlSession;
+
+import dao.SqlMapClient;
 import dto.comp.CompDataBean;
 
 public class CompDBBean implements CompDao{
+	private SqlSession sqlSession = SqlMapClient.getSqlSession();
 
 	@Override
 	public int insertComp(CompDataBean dto) {
