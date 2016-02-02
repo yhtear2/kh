@@ -1,9 +1,21 @@
 @CHARSET "UTF-8";
-
+.introduce{
+	width: 700;
+	height: 100%;
+}
+.standard{
+	background: #f2f7ff;
+}
 .intoroduce_title_line{
 	height:1px; 
 	background:#787878 ; 
 	margin-top:40px;	
 }
-
+.subject{
+	background-color: #f2f7ff;
+	border: 0px;
+	font-size: 0.9em;
+	font: bolder;
+	
+}
 
