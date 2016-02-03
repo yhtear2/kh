@@ -1,4 +1,5 @@
 @CHARSET "UTF-8";
+
 .introduce{
 	width: 700;
 	height: 100%;
@@ -16,6 +17,13 @@
 	border: 0px;
 	font-size: 0.9em;
 	font: bolder;
-	
+	float: left;
+	position: relative;
+	left: 8mm;
 }
-
+#sub_name[]{
+	display: ;
+}
+#sub_change{
+	display: none; 
+}
