@@ -5,6 +5,8 @@
 <link href="${project}introduce.css" rel="stylesheet" type="text/css">
 <script src="${project}introduce.js"></script>
 
+
+
 <h2> 자기 소개서 </h2>
 
 <!-- 자기소개서 입력 크기 잡아주기-->
@@ -12,7 +14,7 @@
 	<!-- 스타일 시스 먹이기 -->
 	<div class="standard">
 	<!-- 폼 이름 정해주기 -->
-	<form name="introduceForm">
+	<form name="introduceForm" id="introduceFormID">
 		<table border="0" cellspacing="0" width="100%">
 			<tr>
 				<th>
@@ -24,9 +26,12 @@
 						</div>	
 						<!-- 변경을 누르면 나타나는 입력 폼 -->
 						<div id="sub_change" class="subject">
-							<input type="text" name="sub_change_name" autofocus="autofocus" style="background: #f2f7ff; border: 1px;">
+							<input type="text" id="change_name"  name="sub_change_name" autofocus="autofocus" 
+									style="background: #f2f7ff; border: 1px;"
+									title="Must be at least 8 characters.">
 							<input type="button" value="확인" onclick="sub_name_ok()">
 							<input type="button" value="취소" onclick="sub_name_cancel()">
+							<input type="text" id="tooltip" title="이렇게 사용하면 됩니다" />
 						</div>
 					</div>
 				</th>
@@ -40,3 +45,7 @@
 	</form>
 	</div>
 </div>
+
+http://jquerytools.github.io/demos/tooltip/form.html
+
+http://annotations.tistory.com/66

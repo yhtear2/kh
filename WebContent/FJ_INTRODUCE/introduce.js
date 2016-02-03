@@ -32,4 +32,18 @@ function sub_name_cancel(){
 }
 //******				******//
 
+$("#tooltip").tooltipsy({
+    css: {
+        'padding': '10px',
+        'max-width': '200px',
+        'color': '#303030',
+        'background-color': '#ffffff',
+        'border': '2px solid #4893BA',
+        '-moz-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        '-webkit-box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'box-shadow': '0 0 10px rgba(0, 0, 0, .5)',
+        'text-shadow': 'none'
+    }
+});
+
 
