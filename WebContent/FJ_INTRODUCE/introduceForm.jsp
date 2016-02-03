@@ -49,3 +49,9 @@
 http://jquerytools.github.io/demos/tooltip/form.html
 
 http://annotations.tistory.com/66
+
+번호를 매겨서
+1번이면 자기소개서
+2번이면 성장과정
+3번이면 등등등....
+이렇게 기본적으로 써지게 하자
