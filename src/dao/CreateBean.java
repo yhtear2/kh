@@ -20,7 +20,6 @@ public class CreateBean {
 	public UrlBasedViewResolver viewResolver() {
 		UrlBasedViewResolver viewResolver = new UrlBasedViewResolver();
 		viewResolver.setViewClass( JstlView.class );
-//		viewResolver.setPrefix( "/main/" );
 		viewResolver.setSuffix( ".jsp" );		
 		return viewResolver;
 	}
