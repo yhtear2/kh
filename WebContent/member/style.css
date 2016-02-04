@@ -1,0 +1,83 @@
+/* Design by Shin Sang-hoon */
+
+h1,h2,h3,h4,h5,h6
+{
+	color: #4C4C4C;	
+}
+a {
+	text-decoration: none;
+	font-size:12px;
+	color : #001A7F;	
+}
+a:hover {
+	text-decoration: none;
+	color : white;
+	font-weight: bold;
+}
+body
+{
+	text-align: center;
+	background-color : #F8F8FF;
+	font-size:11px;
+	font-family:verdana;
+	color: #696969;
+	padding:4px;
+}
+table {	
+	border: 3px solid #487BE1;
+	background-color: #E6FFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin: auto;
+}
+
+table input{	
+	color: black;	
+}
+
+textarea {
+	background-color: #E8FFFF;
+	border: 1px solid #6A84B7;
+}
+
+.input {
+	background-color: #E8FFFF;
+	border: 1px solid #6A84B7;
+	width: 150px;
+}
+.inputbutton {
+	background-color: #D6F0FF; 
+	border-style : hidden;
+	button-radius: 10px 10px 5px; 
+	font-size:12px;
+	font-weight: bold;
+	color: #0100FF;
+	width: 80px;  
+	height: 25px;  
+ 	text-align: center;  
+}
+
+th {
+	background-color: #B2CCFF;
+	color : #36589C;
+	font-size : 11px;
+	border : 1px solid #487BE1;
+	margin : 0px;
+	padding : 3px;
+	height: 30px;
+	width: 100px;
+}
+td {
+	background-color: #D6F0FF; 
+	color : #36648B;
+	font-size : 11px;
+	border : 1px solid gray;
+	margin : 0px;
+	padding : 3px;
+	height: 30px;
+	width: 300px;
+}
+span {
+	color : #ff0000;
+	font-size : 2em;	
+}
