@@ -37,7 +37,15 @@ function add_introduce(){
     var standardLength = $('.standard').length;
     var standardDiv = $('div[id=standardID').clone();
     var subject = ['자기소개서', '성장과정', '성격', '장단점', '지원동기'];
+    
+    
     /*
+     * 현재 div에 추가되는거 까지는 됨
+     * 아이디 변화 줬음
+     * 문제는 안에있는 폼들의 이름을 바꿔줘야함
+     * 그래서... 위에 이름 바꾸는 메소드까지 다 바뀜
+     * 천천히 고민합시다~
+     * 
     if ( standardLength < 10 ) {
     	for(var i=0; i<standardLength; i++){
     		if( i == standardLength ){
@@ -49,6 +57,7 @@ function add_introduce(){
     	alert('작성 가능한 자소서항목은 최대 10개입니다.');
     }
    */
+    
     standardDiv.attr(
     	{
     		'id' : function(index){ return standardID + index; }
