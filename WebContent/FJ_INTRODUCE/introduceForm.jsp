@@ -12,7 +12,7 @@
 <!-- 자기소개서 입력 크기 잡아주기-->
 <div class="introduce">
 	<!-- 스타일 시스 먹이기 -->
-	<div class="standard">
+	<div class="standard" id="standardID">
 	<!-- 폼 이름 정해주기 -->
 	<form name="introduceForm" id="introduceFormID">
 		<table border="0" cellspacing="0" width="100%">
@@ -31,7 +31,6 @@
 									title="Must be at least 8 characters.">
 							<input type="button" value="확인" onclick="sub_name_ok()">
 							<input type="button" value="취소" onclick="sub_name_cancel()">
-							<input type="text" id="tooltip" title="이렇게 사용하면 됩니다" />
 						</div>
 					</div>
 				</th>
@@ -41,10 +40,17 @@
 				<td>
 					<textarea name="contents[]" rows="17" cols="100%"></textarea>
 				</td>
+			<tr>
+				<td>
+					<input type="button" value="추가" onclick="add_introduce()">
+				</td>
+			</tr>
 		</table>
 	</form>
 	</div>
+	<div id="introduces"></div>
 </div>
+
 
 http://jquerytools.github.io/demos/tooltip/form.html
 
