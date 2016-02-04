@@ -26,9 +26,6 @@ public class Comp_InputProHandler implements Commandhandler {
 	@RequestMapping("/compInputPro")
 	@Override
 	public ModelAndView process(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		
-		request.getSession().setAttribute("email", "고병완");
-		
 		CompDataBean dto = new CompDataBean();
 		dto.setEmail(request.getSession().getAttribute("email").toString());
 		dto.setCeo(request.getParameter("ceo"));
@@ -51,11 +48,11 @@ public class Comp_InputProHandler implements Commandhandler {
 			dto.setComp_reg_date(Timestamp.valueOf(request.getParameter("comp_reg_date").toString()));
 		}
 		
-		
+		int result = dao.updateComp(dto);
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("page", "/FJ_COMP/compInputPro");
-		map.put("result", dao.updateComp(dto));
+		map.put("result", result);
 		
 		return new ModelAndView("/main/main", map);
 	}

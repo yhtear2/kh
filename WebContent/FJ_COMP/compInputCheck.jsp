@@ -5,13 +5,8 @@
 	<table>
 		<tr>
 			<th> 비밀번호 </th>
-			<td> <input type="password"> </td>
-		</tr>
-		<tr>
-			<th colspan="2">
-				<input type="submit" value="submit">
-				<input type="button" value="cancel" onclick="history.back()">
-			</th>
+			<td> <input type="password" name="passwd"> </td>
+			<td> <input type="submit" value="submit"> </td>
 		</tr>
 	</table>
 </form>

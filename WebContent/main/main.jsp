@@ -16,7 +16,7 @@
 		<div class="main_submanu">채용공고</div>
 		<div class="main_submanu">QA</div>
 		<!-- 2016/02/02 추가 - 송윤호 -->
-		<div class="main_submanu" onclick="window.location='compInputForm.do'">기업정보 입력</div>
+		<div class="main_submanu" onclick="window.location='compInputCheck.do'">기업정보 입력</div>
 		<div style="width: 150px; height: 280px;"> </div>
 		<div class="main_submanu"><i class="fa fa-github"></i>Git</div>
 	</div>

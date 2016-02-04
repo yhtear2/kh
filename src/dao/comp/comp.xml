@@ -32,7 +32,6 @@
 				
 		WHERE 	EMAIL 			= #{email, jdbcType=VARCHAR}
 	</update>
-
 </mapper>	
 
 

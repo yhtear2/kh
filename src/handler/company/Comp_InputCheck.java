@@ -23,6 +23,9 @@ public class Comp_InputCheck implements Commandhandler {
 	@RequestMapping("/compInputCheck")
 	@Override
 	public ModelAndView process(HttpServletRequest request, HttpServletResponse response) throws Throwable {
+		request.getSession().setAttribute("email", "고병완");
+		request.getSession().setAttribute("passwd", "123");
+		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("page", "/FJ_COMP/compInputCheck");
 		
