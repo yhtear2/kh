@@ -20,8 +20,8 @@ import handler.Commandhandler;
 @Controller
 public class Comp_InputProHandler implements Commandhandler {
 
-	@Resource(name="dao")
-	private CompDao dao;
+	@Resource(name="compDao")
+	private CompDao compDao;
 
 	@RequestMapping("/compInputPro")
 	@Override
@@ -55,7 +55,7 @@ public class Comp_InputProHandler implements Commandhandler {
 			dto.setComp_reg_date(Timestamp.valueOf(request.getParameter("comp_reg_date").toString()));
 		}
 		
-		int result = dao.updateComp(dto);
+		int result = compDao.updateComp(dto);
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("page", "/FJ_COMP/compInputPro");

@@ -12,7 +12,7 @@ import dao.comp.CompDao;
 public class CreateBean {
 	
 	@Bean
-	public CompDao dao() {
+	public CompDao compDao() {
 		return new CompDBBean();
 	}
 	

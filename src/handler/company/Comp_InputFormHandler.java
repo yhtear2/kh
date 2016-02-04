@@ -17,8 +17,8 @@ import handler.Commandhandler;
 @Controller
 public class Comp_InputFormHandler implements Commandhandler {
 
-	@Resource(name="dao")
-	private CompDao dao;
+	@Resource(name="compDao")
+	private CompDao compDao;
 
 	@RequestMapping("/compInputForm")
 	@Override
