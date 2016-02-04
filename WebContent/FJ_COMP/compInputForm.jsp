@@ -23,17 +23,17 @@ ${result}
 			<tr>
 				<th> 전화 번호</th>
 				<td colspan="5">
-					<input type="text" name="tel">
-					- <input type="text" name="tel">
-					- <input type="text" name="tel">
+					<input type="text" name="tel1">
+					- <input type="text" name="tel2">
+					- <input type="text" name="tel3">
 				</td>
 			</tr>
 			<tr>
 				<th rowspan="2"> 주소 </th>
-				<td colspan="5"> <input type="text" name="zipcode"> - <input type="text" name="zipcode"> </td>
+				<td colspan="5"> <input type="text" name="zipcode1"> - <input type="text" name="zipcode2"> </td>
 			</tr>
 			<tr>
-				<td colspan="5"> <input type="text" name="address"> - <input type="text" name="address"> </td>
+				<td colspan="5"> <input type="text" name="address1"> - <input type="text" name="address2"> </td>
 			</tr>
 			
 			<tr>

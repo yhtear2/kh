@@ -30,9 +30,16 @@ public class Comp_InputProHandler implements Commandhandler {
 		dto.setEmail(request.getSession().getAttribute("email").toString());
 		dto.setCeo(request.getParameter("ceo"));
 		dto.setComp_type(request.getParameter("comp_type"));
-		dto.setTel(request.getParameter("tel"));
-		dto.setZipcode(request.getParameter("zipcode"));
-		dto.setAddress(request.getParameter("address"));
+		dto.setTel(request.getParameter("tel1")
+			+ "-" + request.getParameter("tel2")
+			+ "-" + request.getParameter("tel3")
+		);
+		dto.setZipcode(request.getParameter("zipcode1")
+			+ "-" + request.getParameter("zipcode2")
+		);
+		dto.setAddress(request.getParameter("address1")
+			+ "-" + request.getParameter("address2")
+		);
 		dto.setInfo(request.getParameter("info"));
 		dto.setCapital(request.getParameter("capital"));
 		if(!CustomUtil.isNull(request.getParameter("year_sale"))){
