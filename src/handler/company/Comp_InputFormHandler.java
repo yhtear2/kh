@@ -19,8 +19,6 @@ public class Comp_InputFormHandler implements Commandhandler {
 
 	@Resource(name="compDao")
 	private CompDao compDao;
-	
-	
 
 	@RequestMapping("/compInputForm")
 	@Override
