@@ -24,10 +24,7 @@ public class CompDBBean implements CompDao{
 	}
 
 	@Override
-	public int deleteComp(CompDataBean dto) {
-		return 0;
+	public int deleteCdomp(String id) {
+		return sqlSession.delete("Comp.deleteComp", id);
 	}
-	
-	
-
 }

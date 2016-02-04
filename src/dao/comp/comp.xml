@@ -10,7 +10,7 @@
 			EMAIL
 			, REG_DATE
 		)VALUES(
-			#{email, jdbcType=VARCHAR}
+			#{email}
 			, SYSDATE
 		)
 	</insert>
@@ -29,9 +29,14 @@
 				, LIKE_COUNT 	= #{like_count, jdbcType=VARCHAR}
 				, COMP_REG_DATE = #{comp_reg_date, jdbcType=VARCHAR}
 				, LAST_DATE 	= SYSDATE
-				
-		WHERE 	EMAIL 			= #{email, jdbcType=VARCHAR}
+		WHERE 	EMAIL 			= #{email}
 	</update>
+	
+	<delete id="deleteComp" parameterType="java.lang.String">
+		DELETE
+		FROM 	FJ_COMP
+		WHERE 	EMAIL = #{email}
+	</delete>
 </mapper>	
 
 
