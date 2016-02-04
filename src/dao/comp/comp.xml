@@ -4,7 +4,34 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 <mapper namespace="Comp">
+	<insert id="insertComp" parameterType="dto.comp.CompDataBean">
+		INSERT INTO FJ_COMP
+		(
+			EMAIL
+			, REG_DATE
+		)VALUES(
+			#{email, jdbcType=VARCHAR}
+			, SYSDATE
+		)
+	</insert>
 	
+	<update id="updateComp" parameterType="dto.comp.CompDataBean">
+		UPDATE 	FJ_COMP
+		SET 	CEO 			= #{ceo, jdbcType=VARCHAR}
+				, COMP_TYPE 	= #{comp_type, jdbcType=VARCHAR}
+				, TEL 			= #{tel, jdbcType=VARCHAR}
+				, ZIPCODE 		= #{zipcode, jdbcType=VARCHAR}
+				, ADDRESS 		= #{address, jdbcType=VARCHAR}
+				, INFO 			= #{info, jdbcType=VARCHAR}
+				, CAPITAL 		= #{capital, jdbcType=VARCHAR}
+				, YEAR_SALE 	= #{year_sale, jdbcType=VARCHAR}
+				, EMP_COUNT 	= #{emp_count, jdbcType=VARCHAR}
+				, LIKE_COUNT 	= #{like_count, jdbcType=VARCHAR}
+				, COMP_REG_DATE = #{comp_reg_date, jdbcType=VARCHAR}
+				, LAST_DATE 	= SYSDATE
+				
+		WHERE 	EMAIL 			= #{email, jdbcType=VARCHAR}
+	</update>
 
 </mapper>	
 

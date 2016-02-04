@@ -25,7 +25,7 @@ public class CompDBBean implements CompDao{
 
 	@Override
 	public int updateComp(CompDataBean dto) {
-		return 0;
+		return sqlSession.update("Comp.updateComp", dto);
 	}
 
 	@Override

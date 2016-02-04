@@ -22,7 +22,7 @@
 		</tr>
 		<tr>
 			<th rowspan="2"> 주소 </th>
-			<td colspan="5"> <input type="text" name="zipCode"> - <input type="text" name="zipCode"> </td>
+			<td colspan="5"> <input type="text" name="zipcode"> - <input type="text" name="zipcode"> </td>
 		</tr>
 		<tr>
 			<td colspan="5"> <input type="text" name="address"> - <input type="text" name="address"> </td>

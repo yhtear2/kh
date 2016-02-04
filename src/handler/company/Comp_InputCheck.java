@@ -15,16 +15,16 @@ import dao.comp.CompDao;
 import handler.Commandhandler;
 
 @Controller
-public class Comp_InputFormHandler implements Commandhandler {
+public class Comp_InputCheck implements Commandhandler {
 
 	@Resource(name="dao")
 	private CompDao dao;
 
-	@RequestMapping("/compInputForm")
+	@RequestMapping("/compInputCheck")
 	@Override
 	public ModelAndView process(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("page", "/FJ_COMP/compInputForm");
+		map.put("page", "/FJ_COMP/compInputCheck");
 		
 		return new ModelAndView("/main/main", map);
 	}

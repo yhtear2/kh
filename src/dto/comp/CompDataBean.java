@@ -7,7 +7,7 @@ public class CompDataBean {
 	private String ceo;					// 사장
 	private String comp_type;			// 기업 형태
 	private String tel;					// 전화번호
-	private String zipCode;				// 우편번호
+	private String zipcode;				// 우편번호
 	private String address;				// 주소
 	private String info;				// 회사 소개
 	private String capital;				// 자본금
@@ -42,11 +42,11 @@ public class CompDataBean {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public String getZipCode() {
-		return zipCode;
+	public String getZipcode() {
+		return zipcode;
 	}
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
+	public void setZipcode(String zipCode) {
+		this.zipcode = zipCode;
 	}
 	public String getAddress() {
 		return address;
