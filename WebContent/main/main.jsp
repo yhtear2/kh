@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	session.setAttribute("email", "고병완");
+	session.setAttribute("passwd", "123");
+%>
+
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
 <link href="/SpringEx/main/defult.css" rel="stylesheet" type="text/css">

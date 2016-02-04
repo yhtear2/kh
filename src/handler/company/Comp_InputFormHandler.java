@@ -19,11 +19,12 @@ public class Comp_InputFormHandler implements Commandhandler {
 
 	@Resource(name="compDao")
 	private CompDao compDao;
+	
+	
 
 	@RequestMapping("/compInputForm")
 	@Override
 	public ModelAndView process(HttpServletRequest request, HttpServletResponse response) throws Throwable {
-		
 		String id 		= request.getSession().getAttribute("email").toString();
 		String passwd 	= request.getParameter("passwd");
 		
