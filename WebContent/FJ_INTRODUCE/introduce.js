@@ -2,22 +2,28 @@
  *	제목 변경
  */
 // 제목 변경 버트는 누르면 실행되는 메소드
-function sub_name_modify(){
+var cnt = 0;
+function sub_name_modify(id){
+	alert( id );
+	
+	
+	
+	/*
 	// id가 sub_name 이라는 div 사라지게함 
 	$("div[id=sub_name]").css("display", "none");
 	// id가 sub_change 이라는 div 나타나게 함
 	$("div[id=sub_change]").css("display", "block");
 	// sub_name_1 div에있는 텍스트 값 인풋폼에 등록
-	introduceForm.sub_change_name.value = $("div[id=sub_name_1]").text();
+	$('input[name=sub_change_name]').val( $("div[id=sub_name_1]").text() );
+	*/
 }
 // 확인 버튼을 누르면 실행되는 메소드
 function sub_name_ok(){
 	// div를 받아옴
-	var sub_name = document.getElementById("sub_name_1");
 	// innerHTML을 이용해 인풋폼에 있는 내용으로 변경
-	sub_name.innerHTML = $("input[name=sub_change_name").val();
+	$('div[id=sub_name_1]').text( $("input[name=sub_change_name").val() );
 	// 인풋폼 초기화
-	introduceForm.sub_change_name.value = "";
+	$("input[name=sub_change_name").val("");
 	// 위에설명 참고
 	$("div[id=sub_name]").css("display", "block");
 	$("div[id=sub_change]").css("display", "none");
@@ -35,7 +41,7 @@ function sub_name_cancel(){
 // 자기소개서 추가 메소드
 function add_introduce(){
     var standardLength = $('.standard').length;
-    var standardDiv = $('div[id=standardID').clone();
+    var standardDiv = $('.standard').first().clone().attr('id', function(){ return 'standardID' + cnt;} );
     var subject = ['자기소개서', '성장과정', '성격', '장단점', '지원동기'];
     
     
@@ -56,14 +62,19 @@ function add_introduce(){
     }else{
     	alert('작성 가능한 자소서항목은 최대 10개입니다.');
     }
-   */
+   
     
     standardDiv.attr(
     	{
     		'id' : function(index){ return standardID + index; }
     	}		
     );
+    */
+    //standardDiv.attr('id', function(index){ return standardID + index; });
+    //$(standardDiv).find('button[name=modify]').attr('onclick', function(){ return 'sub_name_modify(standardID' + cnt + ')'} );
+    alert( $(standardDiv).find('button[name=modify]').attr('name') );
 	$(standardDiv).appendTo('div[id=introduces]');
+    cnt++; 
     
     
     
